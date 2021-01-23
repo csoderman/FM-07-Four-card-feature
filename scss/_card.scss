@@ -7,6 +7,7 @@
     width: 350px;
     overflow: hidden;
     margin-bottom: 2rem;
+    transition: transform 0.5s ease;
 
     &::before {
         content: '';
@@ -33,6 +34,9 @@
         top: 60%;
         left: 75%;
     } 
+    &:hover {
+        transform: scale(.95);
+    }
 }
 
 // COLOR THE CARDS
