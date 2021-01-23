@@ -1,0 +1,67 @@
+.card {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 3px 26px 5px rgba(199, 199, 199, 0.11), 0 3px 16px 5px rgba(177, 176, 176, 0.23);
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+    &::before {
+        content: '';
+        top: 0;
+        left: 0;
+        background-color: var(--clr-accent, $header-color);
+        position: absolute;
+        padding: 5px 100% 0 0;
+    }
+    & {
+        padding: 1.5rem 2.5rem;
+    }
+    &-title {
+        color: $header-color;
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+    &-text {
+        color: $text-color;
+        margin-top: 0.5rem;
+    }
+    &-img {
+        position: absolute;
+        top: 60%;
+        left: 75%;
+    } 
+}
+
+// COLOR THE CARDS
+
+.card-red {
+    --clr-accent: hsl(0, 78%, 62%);
+}
+
+.card-cyan {
+    --clr-accent: hsl(180, 62%, 55%);
+}
+
+.card-orange {
+    --clr-accent: hsl(34, 97%, 64%);
+}
+
+.card-blue {
+    --clr-accent: hsl(212, 86%, 64%);
+}
+
+// FLEX CONTAINER FOR CARDS
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 1200px) {
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+    }
+}
